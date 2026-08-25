@@ -1,0 +1,23 @@
+name = "wrong-question-book"
+main = "src/index.ts"
+compatibility_date = "2026-08-25"
+
+# 静态资源（前端 public/ 目录）通过 ASSETS 绑定服务
+[assets]
+directory = "./public"
+binding = "ASSETS"
+
+# D1 数据库（执行 npm run db:create 后，将返回的真实 database_id 填入下方占位符）
+[[d1_databases]]
+binding = "DB"
+database_name = "wrong-question-book-db"
+database_id = "00000000-0000-0000-0000-000000000000"  # 占位 UUID，本地开发可用；上线前需替换
+
+# R2 对象存储（用于错题图片上传）
+[[r2_buckets]]
+binding = "BUCKET"
+bucket_name = "wrong-question-book-assets"
+
+# 本地开发观察模式（无需 --watch 标志）
+[observability]
+enabled = true

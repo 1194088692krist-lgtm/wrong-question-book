@@ -1,0 +1,33 @@
+# 依赖
+node_modules/
+
+# 构建产物
+dist/
+.wrangler/
+
+# 本地环境变量与密钥
+.dev.vars
+.dev.vars.*
+
+# 编辑器/系统
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# 日志
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Cloudflare
+wrangler.toml.bak
+
+# 临时脚本（部署过程中使用，不入库）
+.upload.mjs
+.fix-upload.mjs
+.debug-upload.mjs
+.push-github.bat

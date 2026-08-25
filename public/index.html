@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#3b82f6" />
+  <title>错题本</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='26' font-size='28'>📚</text></svg>" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header class="app-header">
+    <div class="container header-inner">
+      <a href="#/" class="brand">
+        <span class="brand-icon">📚</span>
+        <span class="brand-text">错题本</span>
+      </a>
+      <nav class="nav">
+        <a href="#/" class="nav-link" data-route="list">错题</a>
+        <a href="#/review" class="nav-link" data-route="review">复习<span class="badge" id="dueBadge" hidden>0</span></a>
+        <a href="#/stats" class="nav-link" data-route="stats">统计</a>
+        <a href="#/new" class="nav-link nav-primary" data-route="new">+ 新建</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" id="app">
+    <!-- 视图由 app.js 渲染 -->
+    <div class="loading">加载中…</div>
+  </main>
+
+  <footer class="app-footer">
+    <div class="container">
+      <span>错题本 · 基于 Cloudflare Workers + D1</span>
+    </div>
+  </footer>
+
+  <!-- Toast 容器 -->
+  <div id="toast" class="toast" hidden></div>
+
+  <script src="/app.js" defer></script>
+</body>
+</html>
